@@ -1,16 +1,18 @@
 const route = require('express').Router()
 const passport = require('passport')
+
 route.get('/',(req,res)=>
 {
-    res.render('login')
+    res.render('loanlogin')
 }
 )
 route.post('/',
   passport.authenticate('local', {
-    successRedirect: '/profile',
-    failureRedirect: '/login'
- } ))
+    successRedirect: '/Take_loan',
+    failureRedirect: '/loanlogin'
+  })
 
+)
 
 
 module.exports = {

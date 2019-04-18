@@ -64,11 +64,10 @@
 				<!-- top-nav -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="/index" class="active">Home</a></li>
-						<li><a href="/login" class="scroll">Log in</a></li>    
-						<li><a href="/signup" class="scroll">Open Account</a></li> 
-						 
-						<li><a href="/admin_page" class="scroll">Admin Login</a></li>    
+						<li><a href="index.html" class="active">Home</a></li>
+						<li><a href="about.html" class="scroll">Loan Login</a></li>    
+						<li><a href="services.html" class="scroll">Open Loan Account</a></li>    
+						<li><a href="gallery.html" class="scroll">Admin Login</a></li>    
 					
 						<li><a href="contact.html" class="scroll">Contact Us</a></li>
 					</ul>  
@@ -167,13 +166,101 @@
 			<div class="w3ls-about agile-section">
 					<div class="w3-agileits-about-grids">
 						<div class="col-md-6 col-sm-6 col-xs-6 agileits-title">
-							<h3>what makes <img src="images/logo.png" alt="logo"/>Unique?</h3> 
+						<img src="images/logo.png" alt="logo"/>
 						</div>
 						<div class="col-md-6 col-sm-6 col-xs-6  agile-about-bottom-right">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget faucibus est.Suspendisse auctor urna blandit ultricies maximus.
-							Sed accumsan auctor lacus ac mattis. Mauris at nibh purus. Nullam vulputate, urna id facilisis eleifend, nisl turpis suscipit augue, eget tincidunt velit nunc ut lectus.Morbi rutrum ut risus sed hendrerit. Mauris at nibh purus. Nullam vulputate, urna id facilisis eleifend.</p>
-							<p class="w3ls-about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget faucibus est.Suspendisse auctor urna blandit ultricies maximus.
-							Sed accumsan auctor lacus ac mattis. Mauris at nibh purus. Nullam vulputate, urna id facilisis eleifend, nisl turpis suscipit augue, eget tincidunt velit nunc ut lectus.Morbi rutrum ut risus sed hendrerit.</p>
+							 <div id="form">
+                                    <form id="register-form" class="text-left" method="post" action="/loansignup">
+                                            <div class="login-form-main-message"></div>
+                                            <div class="main-login-form">
+                                                <div class="login-group">
+                                                    <div class="form-group">
+                                                        <label for="reg_username" class="sr-only">Email address</label>
+                                                        <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="reg_password" class="sr-only">Password</label>
+                                                        <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+                                                        <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password"
+                                                            required>
+                                                    </div>
+                                    
+                                                    <div class="form-group">
+                                                        <label for="reg_email" class="sr-only">Email</label>
+                                                        <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="reg_fullname" class="sr-only">Full Name</label>
+                                                        <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name" required>
+                                                    </div>
+                                    
+                                                    <div class="form-group login-group-checkbox">
+                                                        <input type="radio" class="" name="reg_gender" id="male" value="male" required>
+                                                        <label for="male">male</label>
+                                    
+                                                        <input type="radio" class="" name="reg_gender" id="female" value="female" required>
+                                                        <label for="female">female</label>
+                                                    </div>
+                                    
+                                                    <div class="form-group">
+                                                        <label for="reg_dob" class="sr-only">DOB</label>
+                                                        <input type="months" class="form-control form-group" id="reg_dob" name="reg_dob" placeholder="dob : dd/mm/yyyy" style="font-color : #aaa"
+                                                            required>
+                                                    </div>
+                                    
+                                                    <div class="form-group">
+                                                        <div class="form-group">
+                                                            <label for="reg_address" class="sr-only">Address</label>
+                                                            <input type="text" class="form-control" id="reg_city" name="reg_city" placeholder="city" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="reg_state" name="reg_state" placeholder="state" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="reg_pincode" name="reg_pincode" placeholder="pincode" required>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <script>
+                                                        function myFunction1(contentId) {
+                                                            var arr = document.getElementsByClassName("select_account");
+                                                            for (var i = 0; i < arr.length; i++) {
+                                                                arr[i].style.display = "none";
+                                                                arr[i].value = null;
+                                                            }
+                                                            var x = document.getElementById(contentId);
+                                                            console.log(contentId);
+                        
+                                                            contentId.style.display = "block";
+                        
+                                                        }
+                        
+                                                    </script>
+                                    
+                                                
+                                    
+                                                    
+                                    
+                                                    
+                                    
+                                                    <div class="form-group login-group-checkbox">
+                                                        <input type="checkbox" class="" id="reg_agree" name="reg_agree" required>
+                                                        <label for="reg_agree">i agree with
+                                                            <a href="#">terms</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <button onclick="call()" type="submit" name="admin" class="login-button btn btn-sec" >
+                                                   Register
+                                                </button>
+                                            </div>
+    
+        </div>
+        <br>
+        <br>
 						
 						</div>
 						<div class="clearfix"> </div>
@@ -275,6 +362,7 @@
 			</div> -->
 			<!-- //about-bottom-grid-->
 	</div>
+	<script>
 	<!-- //about -->
 	<!--services-->
 	<div class="w3ls-section services">

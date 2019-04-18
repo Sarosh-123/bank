@@ -79,10 +79,7 @@
 						<li><a href="loanaccount"  class="scroll active"> Loan Details</a></li>    
 						<li><a href="loan_deposit"  class="scroll">
 							Deposit Loan
-							</a></li>   
-							
-							<li><a href="transaction" class="scroll">	
-My Transactions	</a></li>  
+							</a></li>
 					
 						<li><a href="Take_loan" class="scroll ">
 							Take Loan
@@ -109,7 +106,122 @@ My Transactions	</a></li>
 		    $("#show1").hide()
 				$.get('/loanaccount/details1',(data)=>
 				{ console.log(data)
-              $("#append").append("<p>uwaish</p>")
+              $("#append").append(`
+<div class="table-responsive">
+                                                <table class="table table-bordered table-striped">
+
+                                                    <tbody>
+														 <tr>
+                                                            <td>
+                                                                <strong>Loan Number</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                     ${data.loan.loanNo}                                                                </span>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Loan Type</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                   ${data.loancustomer.accounttype}                                                               </span>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Customer Type</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                   ${data.loancustomer.customertype}                                                              </span>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Loan Holder</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                   ${data.loancustomer.fullname}                                                                 </span>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Email</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                     ${data.loancustomer.email}                                                                </span>
+                                                            </td>
+
+                                                        </tr>
+																												    <tr>
+                                                            <td>
+                                                                <strong>Loan Pending</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                     ${data.loan.balance}                                                               </span>
+                                                            </td>
+
+                                                        </tr>     
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Date of Birth</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                     ${data.loancustomer.dateofbirth}                                                                </span>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Gender</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                     ${data.loancustomer.gender}                                                                </span>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong>city</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                    ${data.loancustomer.city}                                                               </span>
+                                                            </td>
+
+                                                        </tr>
+                                                       
+                                                        <tr>
+                                                            <td>
+                                                                <strong>Pincode</strong>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                     ${data.loancustomer.pincode}                                                               </span>
+                                                            </td>
+
+                                                        </tr>
+																												
+                                                                                                                           </span>
+                                                           
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>`)
                                   
 				})
 	 }
