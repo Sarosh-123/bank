@@ -1,6 +1,7 @@
 const route = require('express').Router()
 const passport = require('passport')
 const {Loan}=require('../db')
+const {information}=require('../db')
 
 route.get('/',(req,res)=>
 {
@@ -20,7 +21,8 @@ route.post('/put', async(req,res)=>
     }
   }
   )
-  res.redirect('/admin_page')
+
+  res.redirect('/index.html')
   })
   module.exports={
       route

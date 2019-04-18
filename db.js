@@ -15,7 +15,7 @@ function generateMyId()
 const information = db.define('information',{
   Loanno:Sequelize.INTEGER,
   balance:Sequelize.INTEGER,
-  desc:Sequelize.STRING
+  desc:Sequelize.STRING,
 })
 
 const Accounts = db.define('account',{
